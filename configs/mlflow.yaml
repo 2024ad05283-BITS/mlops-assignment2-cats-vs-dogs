@@ -1,0 +1,4 @@
+mlflow:
+  tracking_uri: http://127.0.0.1:5000
+  experiment_name: cats_vs_dogs
+  run_name: baseline_run

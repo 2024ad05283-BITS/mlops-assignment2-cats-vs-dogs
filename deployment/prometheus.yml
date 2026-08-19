@@ -1,0 +1,25 @@
+# ==========================================================
+# prometheus.yml
+#
+# Prometheus Configuration
+#
+# ==========================================================
+
+global:
+  scrape_interval: 5s
+
+  evaluation_interval: 5s
+
+
+scrape_configs:
+
+  - job_name: "cats-vs-dogs-api"
+
+    scrape_interval: 5s
+
+    metrics_path: /metrics/prometheus
+
+    static_configs:
+
+      - targets:
+          - "cats-vs-dogs-api:8000"

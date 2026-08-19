@@ -1,0 +1,35 @@
+# ==========================================================
+# prometheus.yml
+#
+# Prometheus Configuration
+#
+# Responsibilities
+# ----------------
+# 1. Scrape application metrics
+# 2. Collect request count
+# 3. Collect request latency
+# 4. Collect application health
+# ==========================================================
+
+global:
+
+  scrape_interval: 15s
+
+  evaluation_interval: 15s
+
+scrape_configs:
+
+  - job_name: "cats-vs-dogs-api"
+
+    metrics_path: "/metrics"
+
+    static_configs:
+
+      - targets:
+          - "cats-vs-dogs-api:8000"
+
+        labels:
+
+          application: "cats-vs-dogs-api"
+
+          environment: "production"

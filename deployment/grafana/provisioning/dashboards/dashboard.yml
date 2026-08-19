@@ -1,0 +1,30 @@
+# ==========================================================
+# dashboard.yml
+#
+# dashboard Configuration
+#
+# ==========================================================
+
+apiVersion: 1
+
+providers:
+
+  - name: "MLOps Dashboards"
+
+    orgId: 1
+
+    folder: "MLOps"
+
+    type: file
+
+    disableDeletion: false
+
+    updateIntervalSeconds: 30
+
+    allowUiUpdates: false
+
+    options:
+
+      path: /var/lib/grafana/dashboards
+
+      foldersFromFilesStructure: true

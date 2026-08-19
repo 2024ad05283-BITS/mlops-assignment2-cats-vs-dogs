@@ -1,0 +1,17 @@
+﻿.venv/
+venv/
+.git/
+.dvc/
+data/
+models/
+*.pkl
+*.pt
+*.h5
+__pycache__/
+.pytest_cache/
+.dvcignore
+.gitignore
+mlflow.db
+test-results.xml
+tests/
+docs/

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+mlflow
+dvc
+pytest
+flake8
+python-multipart
+prometheus-client

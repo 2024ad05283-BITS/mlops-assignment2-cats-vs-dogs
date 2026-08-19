@@ -1,0 +1,7 @@
+dataset:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  image_size: [224, 224]
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1

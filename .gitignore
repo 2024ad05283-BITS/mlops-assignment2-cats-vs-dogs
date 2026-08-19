@@ -1,0 +1,15 @@
+# Environments & Caches
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Data & Artifacts (Use DVC instead of Git)
+data/
+artifacts/
+mlruns/
+
+# Local MLflow Database & Logs
+mlflow
+*.db
+*.sqlite
+*.log
