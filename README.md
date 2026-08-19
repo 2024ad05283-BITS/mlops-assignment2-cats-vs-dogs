@@ -1,7 +1,7 @@
 # 🐱🐶 MLOps Assignment 2 --- End-to-End Cats vs Dogs Classification
 
 > **Course:** MLOps --- S1-25_AIMLCZG523\
-> **Assignment:** 2 \| **Total Marks:** 50\
+> **Assignment:** 2 \
 > **Objective:** Build an end-to-end MLOps pipeline for model
 > development, artifact creation, packaging, containerization, CI/CD
 > deployment, and monitoring using open-source tools.
@@ -1405,175 +1405,7 @@ documented above.
 
 ------------------------------------------------------------------------
 
-# 16. Verification Checklist
-
-## M1 --- 10 Marks
-
--   [ ] Git source versioning available
--   [ ] Dataset versioning configured with DVC/Git-LFS
--   [ ] Dataset validation completed
--   [ ] 224×224 RGB preprocessing implemented
--   [ ] Train/validation/test split implemented
--   [ ] Training augmentation implemented
--   [ ] Baseline CNN implemented
--   [ ] Model training completed
--   [ ] Best model checkpoint saved
--   [ ] Final model checkpoint saved
--   [ ] Evaluation metrics generated
--   [ ] Loss/accuracy plots generated
--   [ ] Confusion matrix generated
--   [ ] MLflow run available
--   [ ] Parameters logged
--   [ ] Metrics logged
--   [ ] Artifacts logged
-
-## M2 --- 10 Marks
-
--   [ ] FastAPI service starts
--   [ ] Health endpoint works
--   [ ] Prediction endpoint works
--   [ ] Class probabilities/label returned
--   [ ] `requirements.txt` available
--   [ ] Key dependencies pinned
--   [ ] Dockerfile available
--   [ ] Docker image builds
--   [ ] Container starts
--   [ ] Container health check works
--   [ ] Container prediction works
-
-## M3 --- 10 Marks
-
--   [ ] Preprocessing unit test
--   [ ] Inference/model utility unit test
--   [ ] pytest passes
--   [ ] GitHub Actions CI exists
--   [ ] CI installs dependencies
--   [ ] CI runs tests
--   [ ] CI builds Docker image
--   [ ] CI publishes image
--   [ ] Registry credentials stored as secrets
-
-## M4 --- 10 Marks
-
--   [ ] Docker Compose configuration
--   [ ] Deployment starts
--   [ ] Service becomes reachable
--   [ ] Health check passes
--   [ ] Prediction works
--   [ ] Smoke-test script exists
--   [ ] CD workflow exists
--   [ ] Main-branch deployment flow configured
--   [ ] New image is deployed
--   [ ] Smoke-test failure fails the pipeline
-
-## M5 --- 10 Marks
-
--   [ ] Request/response operational logging
--   [ ] Sensitive data excluded from logs
--   [ ] Request count
--   [ ] Success/failure count
--   [ ] Request latency
--   [ ] Metrics endpoint or equivalent
--   [ ] Post-deployment request batch
--   [ ] True labels collected
--   [ ] Accuracy
--   [ ] Precision
--   [ ] Recall
--   [ ] F1 score
--   [ ] Predictions CSV
--   [ ] Evaluation report
-
-------------------------------------------------------------------------
-
-# 17. Evidence for the Evaluator
-
-## M1
-
-Show:
-
-1.  Dataset validation output
-2.  Preprocessing configuration
-3.  CNN/model smoke test
-4.  Training output
-5.  MLflow experiment
-6.  Model checkpoints
-7.  Loss curve
-8.  Accuracy curve
-9.  Confusion matrix
-10. DVC status/pipeline
-
-## M2
-
-Show:
-
-1.  FastAPI Swagger
-2.  `/health`
-3.  `/predict`
-4.  Dockerfile
-5.  Docker build
-6.  Running container
-
-## M3
-
-Show:
-
-1.  `pytest -v`
-2.  `.github/workflows/ci.yml`
-3.  Successful GitHub Actions run
-4.  Docker image build
-5.  Registry image
-
-## M4
-
-Show:
-
-1.  `docker-compose.yml`
-2.  Running deployment
-3.  Deployment logs
-4.  `/health`
-5.  `/predict`
-6.  Smoke-test result
-7.  Successful CD workflow
-
-## M5
-
-Show:
-
-1.  `/metrics`
-2.  API logs
-3.  Post-deployment predictions
-4.  True labels
-5.  Evaluation report
-6.  Final measured metrics
-
-------------------------------------------------------------------------
-
-# 18. Five-Minute Demonstration Plan
-
-The assignment requires a screen recording of **less than 5 minutes**
-showing the complete workflow. fileciteturn0file0L76-L80
-
-Recommended sequence:
-
-``` text
-00:00 – 00:30   Repository + architecture
-00:30 – 01:00   M1: MLflow + model artifacts
-01:00 – 01:30   M2: FastAPI /health + /predict
-01:30 – 02:00   Docker image/container
-02:00 – 02:45   M3: GitHub Actions CI
-02:45 – 03:30   Registry + CD deployment
-03:30 – 04:00   Smoke test
-04:00 – 04:30   Logs + /metrics
-04:30 – 05:00   Post-deployment report + final result
-```
-
-The strongest evidence is a **single continuous story from code change
-to deployed prediction**, rather than a collection of disconnected
-screenshots.
-
-------------------------------------------------------------------------
-
-# 19. Troubleshooting
+# 16. Troubleshooting
 
 ## Uvicorn command not found
 
@@ -1649,7 +1481,7 @@ record the final experiment in MLflow.
 
 ------------------------------------------------------------------------
 
-# 20. Final MLOps Lifecycle
+# 17. Final MLOps Lifecycle
 
 ``` text
                     DATA
@@ -1710,7 +1542,7 @@ record the final experiment in MLflow.
 
 ------------------------------------------------------------------------
 
-# 21. Conclusion
+# 18. Conclusion
 
 This project demonstrates the complete MLOps lifecycle for a **Cats vs
 Dogs binary image-classification service**:
