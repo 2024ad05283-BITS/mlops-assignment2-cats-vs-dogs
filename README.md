@@ -1342,7 +1342,7 @@ checkout
 → Docker build
 → registry publish
 
-CD: [!-- CI trigger -->]
+CD: <<[!-- CI trigger -->] >>
 image pull
 → deployment
 → health
