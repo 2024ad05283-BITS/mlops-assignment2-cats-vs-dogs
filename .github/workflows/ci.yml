@@ -51,9 +51,33 @@ jobs:
 
           pip install pytest
 
+          pip install "dvc[s3]"
+
 
       # ======================================================
-      # 4. Unit Tests
+      # 4. Configure AWS
+      # ======================================================
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+
+      # ======================================================
+      # 5. Pull model from DVC/S3
+      # ======================================================
+
+      - name: Pull DVC Model
+        run: |
+
+          python -m dvc pull
+
+
+      # ======================================================
+      # 6. Unit Tests
       # ======================================================
 
       - name: Run Unit Tests
@@ -63,7 +87,7 @@ jobs:
 
 
       # ======================================================
-      # 5. Build Docker Image
+      # 7. Build Docker Image
       # ======================================================
 
       - name: Build Docker Image
@@ -76,8 +100,7 @@ jobs:
 
 
       # ======================================================
-      # 6. Docker Hub Login
-      # Only on push, NOT pull request
+      # 8. Login to Docker Hub
       # ======================================================
 
       - name: Login to Docker Hub
@@ -91,8 +114,7 @@ jobs:
 
 
       # ======================================================
-      # 7. Push Docker Image
-      # Only on push
+      # 9. Push Docker Image
       # ======================================================
 
       - name: Push Docker Image
