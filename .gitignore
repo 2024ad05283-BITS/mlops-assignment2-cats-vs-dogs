@@ -6,6 +6,9 @@ __pycache__/
 # Data & Artifacts (Use DVC instead of Git)
 data/
 artifacts/
+!artifacts/
+!artifacts/models/
+!artifacts/models/*.dvc
 mlruns/
 
 # Local MLflow Database & Logs
